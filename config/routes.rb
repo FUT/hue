@@ -1,5 +1,13 @@
 Hue::Application.routes.draw do
-  devise_for :users do
+
+  resources :images
+
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
+
+  resources :users do
+    resources :profiles, shallow: true
   end
 
   # High voltage controller override

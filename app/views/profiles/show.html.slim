@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Avatar:
+  = @profile.avatar
+p
+  strong User:
+  = @profile.user_id
+p
+  strong Full name:
+  = @profile.full_name
+p
+  strong Country:
+  = @profile.country
+
+= link_to 'Edit', edit_profile_path(@profile)
+'|
+= link_to 'Back', profiles_path

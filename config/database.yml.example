@@ -5,7 +5,7 @@ development: &dev
   database: hue_dev
   pool: 5
   username: root
-  password: root
+  password:
 
 test:
   <<: *dev
