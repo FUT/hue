@@ -1,5 +1,7 @@
 Hue::Application.routes.draw do
 
+  resources :posts
+
   resources :images
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
