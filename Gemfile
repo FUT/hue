@@ -40,3 +40,5 @@ gem 'database_cleaner'
 gem 'country-select'
 gem 'inherited_resources'
 gem 'pjax_rails'
+
+gem 'simple_form'
