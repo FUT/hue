@@ -1,12 +1,17 @@
 Hue::Application.routes.draw do
+  resources :texts
+
+  devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }, path_prefix: 'all' do
+    root to: 'pages#home'
+  end
+
+  resources :checkpoints
 
   resources :posts
 
   resources :images
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-
-  devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
 
   resources :users do
     resources :profiles, shallow: true

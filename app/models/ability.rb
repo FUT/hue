@@ -14,6 +14,6 @@ class Ability
   end
 
   def user_abilities(user)
-
+    can :manage, :all
   end
 end

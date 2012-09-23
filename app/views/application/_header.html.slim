@@ -1,2 +1,7 @@
-= render 'login_form'
-| Hue header
+- if signed_in?
+  = render 'signed'
+- else
+  = render 'login_form'
+
+h1#site-name Hue
+.clear

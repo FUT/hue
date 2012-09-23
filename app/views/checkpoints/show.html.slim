@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @checkpoint.title
+p
+  strong Description:
+  = @checkpoint.description
+p
+  strong User:
+  = @checkpoint.user_id
+p
+  strong Seconds:
+  = @checkpoint.seconds
+p
+  strong Length:
+  = @checkpoint.length
+
+= link_to 'Edit', edit_checkpoint_path(@checkpoint)
+'|
+= link_to 'Back', checkpoints_path

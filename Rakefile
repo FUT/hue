@@ -4,6 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-require 'tasks/sex_it_up'
-
 Hue::Application.load_tasks

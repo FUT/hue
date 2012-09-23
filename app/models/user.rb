@@ -11,4 +11,12 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   attr_accessible :email, :password, :password_confirmation, :remember_me
+
+  after_create :add_role
+
+  private
+  def add_role
+    self.role = Role.get(Role::USER)
+    save
+  end
 end
